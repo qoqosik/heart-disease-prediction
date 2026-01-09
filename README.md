@@ -1,89 +1,88 @@
-# Heart Disease Prediction Using Machine Learning
+# Makine Öğrenmesi ile Kalp Hastalığı Tahmini
 
-This project was developed as part of the **Veri Analizi** course.  
-The objective is to apply data analysis and machine learning techniques to predict the presence of heart disease based on patient medical data.
-
----
-
-## 📊 Dataset
-
-- **Source:** Kaggle – Heart Disease Dataset  
-- **Observations:** 1025  
-- **Features:** 13 input features + 1 target variable  
-- **Target:** Binary classification  
-  - `1` — Presence of heart disease  
-  - `0` — No heart disease  
-- **Missing values:** None  
-- **Class balance:** Nearly balanced  
+Bu proje, **Veri Analizi** dersi kapsamında geliştirilmiştir.  
+Projenin amacı, hasta tıbbi verilerini kullanarak kalp hastalığının varlığını tahmin etmek için veri analizi ve makine öğrenmesi tekniklerini uygulamaktır.
 
 ---
 
-## 🎯 Problem Definition
+## 📊 Veri Seti
 
-The task is formulated as a **binary classification problem**, where the goal is to predict whether a patient has heart disease based on clinical and demographic attributes.
-
-This is a medically important problem, as minimizing false negatives (undetected disease cases) is critical in healthcare applications.
-
----
-
-## 🧪 Exploratory Data Analysis (EDA)
-
-During EDA, the dataset was analyzed using:
-- Descriptive statistics
-- Target variable distribution
-- Correlation analysis
-- Data visualizations (heatmaps and plots)
-
-Key insights:
-- Features such as `cp`, `thalach`, and `slope` show positive correlation with heart disease.
-- Features like `exang`, `oldpeak`, `ca`, and `thal` show negative correlation with the target variable.
+- **Kaynak:** Kaggle – Heart Disease Dataset  
+- **Gözlem Sayısı:** 1025  
+- **Özellik Sayısı:** 13 girdi değişkeni + 1 hedef değişken  
+- **Hedef Değişken:** İkili sınıflandırma  
+  - `1` — Kalp hastalığı var  
+  - `0` — Kalp hastalığı yok  
+- **Eksik Veri:** Yok  
+- **Sınıf Dağılımı:** Neredeyse dengeli  
 
 ---
 
-## ⚙️ Data Preprocessing
+## 🎯 Problem Tanımı
 
-- Feature and target separation
-- Train-test split
-- Feature scaling where appropriate
-- No missing value handling or encoding was required, as the dataset was already clean and numerical
+Bu çalışma, klinik ve demografik özelliklere dayanarak bir hastada kalp hastalığının bulunup bulunmadığını tahmin etmeyi amaçlayan bir **ikili sınıflandırma problemi** olarak ele alınmıştır.
+
+Bu problem, sağlık alanında yanlış negatiflerin (hastalığın tespit edilememesi) ciddi sonuçlar doğurabilmesi nedeniyle oldukça önemlidir.
 
 ---
 
-## 🤖 Machine Learning Models
+## 🧪 Keşifsel Veri Analizi (EDA)
 
-The following models were implemented and evaluated:
+EDA aşamasında veri seti aşağıdaki yöntemler kullanılarak analiz edilmiştir:
+- Tanımlayıcı istatistikler
+- Hedef değişken dağılımı
+- Korelasyon analizi
+- Veri görselleştirmeleri (ısı haritaları ve grafikler)
 
-### 1. Logistic Regression
-- Used as a baseline model
-- Interpretable and effective for structured medical data
+Elde edilen temel bulgular:
+- `cp`, `thalach` ve `slope` değişkenlerinin kalp hastalığı ile pozitif korelasyona sahip olduğu gözlemlenmiştir.
+- `exang`, `oldpeak`, `ca` ve `thal` değişkenlerinin ise hedef değişken ile negatif korelasyon gösterdiği tespit edilmiştir.
+
+---
+
+## ⚙️ Veri Ön İşleme
+
+- Girdi değişkenleri ve hedef değişken ayrıştırılmıştır.
+- Eğitim ve test veri setleri oluşturulmuştur.
+- Gerekli durumlarda özellik ölçeklendirmesi uygulanmıştır.
+- Veri seti önceden temiz ve tamamen sayısal olduğu için eksik veri doldurma veya kodlama işlemlerine ihtiyaç duyulmamıştır.
+
+---
+
+## 🤖 Makine Öğrenmesi Modelleri
+
+Aşağıdaki makine öğrenmesi modelleri uygulanmış ve değerlendirilmiştir:
+
+### 1. Lojistik Regresyon
+- Temel (baseline) model olarak kullanılmıştır.
+- Yapısal ve tıbbi veriler için yorumlanabilir ve etkili bir yöntemdir.
 
 ### 2. Random Forest
-- Ensemble learning method
-- Capable of capturing non-linear relationships
+- Topluluk (ensemble) öğrenme yöntemidir.
+- Doğrusal olmayan ilişkileri yakalayabilme yeteneğine sahiptir.
 
 ---
 
-## 📈 Model Evaluation
+## 📈 Model Değerlendirme
 
-Models were evaluated using:
+Modeller aşağıdaki metrikler kullanılarak değerlendirilmiştir:
 - Accuracy
 - Precision
 - Recall
 - F1-score
 - Confusion Matrix
 
-Special emphasis was placed on **recall for class 1**, as detecting patients with heart disease is more important than avoiding false positives.
+Özellikle **1 sınıfı (kalp hastalığı var)** için recall metriğine odaklanılmıştır, çünkü sağlık uygulamalarında hastaların doğru şekilde tespit edilmesi yanlış pozitiflerden daha kritiktir.
 
 ---
 
-## 🏆 Results & Comparison
+## 🏆 Sonuçlar ve Model Karşılaştırması
 
-- **Logistic Regression** achieved higher overall accuracy and significantly better recall for heart disease cases.
-- **Random Forest** showed higher precision but lower recall.
+- **Lojistik Regresyon** modeli, genel doğruluk oranı açısından daha yüksek bir performans sergilemiş ve kalp hastalığı vakaları için belirgin şekilde daha iyi recall değerine ulaşmıştır.
+- **Random Forest** modeli ise daha yüksek precision değerine sahip olmasına rağmen daha düşük recall göstermiştir.
 
-Based on these results, **Logistic Regression** was selected as the most suitable model for this task.
+Bu sonuçlara dayanarak, bu problem için **en uygun model olarak Lojistik Regresyon seçilmiştir**.
 
 ---
 
-## 🧾 Project Structure
-
+## 🧾 Proje Yapısı
