@@ -22,7 +22,7 @@ Projenin amacı, hasta tıbbi verilerini kullanarak kalp hastalığının varlı
 
 Bu çalışma, klinik ve demografik özelliklere dayanarak bir hastada kalp hastalığının bulunup bulunmadığını tahmin etmeyi amaçlayan bir **ikili sınıflandırma problemi** olarak ele alınmıştır.
 
-Bu problem, sağlık alanında yanlış negatiflerin (hastalığın tespit edilememesi) ciddi sonuçlar doğurabilmesi nedeniyle oldukça önemlidir.
+Bu problem, sağlık alanında yanlış negatiflerin ciddi sonuçlara yol açabilmesi nedeniyle önemlidir.
 
 ---
 
