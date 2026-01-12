@@ -53,7 +53,7 @@ Elde edilen temel bulgular:
 
 Aşağıdaki makine öğrenmesi modelleri uygulanmış ve değerlendirilmiştir:
 
-### 1. Lojistik Regresyon
+### 1. Logistik Regression
 - Temel (baseline) model olarak kullanılmıştır.
 - Yapısal ve tıbbi veriler için yorumlanabilir ve etkili bir yöntemdir.
 
@@ -78,7 +78,7 @@ Modeller aşağıdaki metrikler kullanılarak değerlendirilmiştir:
 
 ## 🏆 Sonuçlar ve Model Karşılaştırması
 
-- **Lojistik Regresyon** modeli, genel doğruluk oranı açısından daha yüksek bir performans sergilemiş ve kalp hastalığı vakaları için belirgin şekilde daha iyi recall değerine ulaşmıştır.
+- **Logistik Regression** modeli, genel doğruluk oranı açısından daha yüksek bir performans sergilemiş ve kalp hastalığı vakaları için belirgin şekilde daha iyi recall değerine ulaşmıştır.
 - **Random Forest** modeli ise daha yüksek precision değerine sahip olmasına rağmen daha düşük recall göstermiştir.
 
 Bu sonuçlara dayanarak, bu problem için **en uygun model olarak Lojistik Regresyon seçilmiştir**.
